@@ -1,55 +1,110 @@
 [//]: # (Image References)
 
 [image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
+[image2]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/a.png "Packages"
+[image3]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/b.png "Environment"
+[image4]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/c.png "Brain"
+[image5]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/d.png "State"
+[image6]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/e.png "Control"
+[image7]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/f.png "Scores"
+[image8]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/g.png "Close"
+[image10]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/download.png "Download"
+[image11]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/Navigate.png "Navigate"
+[image12]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/clone.png "Clone"
+[image13]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/Run.png "Run"
+[image14]: https://github.com/LucianaRocha/drlnd-project-1-navigation/blob/master/images/Jupyter.png "Jupyter"
 
 # Project 1: Navigation
 
-### Introduction
+## Project Details
 
-For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
+This project is part of the [Deep Reinforcement Learning Nanodegree Program](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893), by Udacity .
+In this project, an agent is created and trained to navigate (and collect bananas!) in a large, square world.
 
 ![Trained Agent][image1]
 
-A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
+A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Thus, the goal in this project is that the agent collects as many yellow bananas as possible while avoiding blue bananas.
 
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction.  Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
+The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction. Given this information, the agent has to learn how to best select actions. Four discrete actions are available, corresponding to:
 - **`0`** - move forward.
 - **`1`** - move backward.
 - **`2`** - turn left.
 - **`3`** - turn right.
 
-The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
+The task is episodic, and in order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.
 
-### Getting Started
+## Getting Started
 
-1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
-    - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
-    - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
-    - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
-    - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
-    
-    (_For Windows users_) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
+### Files included in this repository:
+- The files below are needed to create and to train the Agent:
+    - Navigation.ipynb
+    - dqn_agent.py
+    - model.py
 
-    (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
+- The trained model:
+    - checkpoint.pth
 
-2. Place the file in the DRLND GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
+- Log file:
+    - unity-environment.log
 
-### Instructions
+- Useful information about the project:
+    - README.md
 
-Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
+- File describing the development process and the learning algorithm:
+    - Report.md
 
-### (Optional) Challenge: Learning from Pixels
+### Getting the code:
+- There are two options to get this project:
+    - Download it as a zip file 
+    ![Download][image10]
+    - Clone this repository using Git version control system Clone
+    ![Clone][image12]
 
-After you have successfully completed the project, if you're looking for an additional challenge, you have come to the right place!  In the project, your agent learned from information such as its velocity, along with ray-based perception of objects around its forward direction.  A more challenging task would be to learn directly from pixels!
+- Install the Anaconda Platform:
+    - Download the installer: [Anaconda](https://www.anaconda.com/distribution/)
+    - Installation Guide: [Anaconda Installation Guide](https://docs.anaconda.com/anaconda/install/)
+    - If you are keen to know more about notebooks and other tools of Project Jupyter, you find more information on [this website](https://jupyter.org/index.html).
 
-To solve this harder task, you'll need to download a new Unity environment.  This environment is almost identical to the project environment, where the only difference is that the state is an 84 x 84 RGB image, corresponding to the agent's first-person view.  (**Note**: Udacity students should not submit a project with this new environment.)
+## Instructions
+- Open the Anaconda Platform and next open the Jupyter: 
 
-You need only select the environment that matches your operating system:
-- Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip)
-- Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana.app.zip)
-- Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86.zip)
-- Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86_64.zip)
+![Jupyter][image14]
 
-Then, place the file in the `p1_navigation/` folder in the DRLND GitHub repository, and unzip (or decompress) the file.  Next, open `Navigation_Pixels.ipynb` and follow the instructions to learn how to use the Python API to control the agent.
+- Navigate to the root of the project in your system and click on the Navigation.ipynb notebook. Follow the instructions in Navigation.ipynb to get started with training the agent: 
 
-(_For AWS_) If you'd like to train the agent on AWS, you must follow the instructions to [set up X Server](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above.
+![Navigate][image11]
+
+### Explore the Environment and next Run the Jupyter Notebook:
+Follow the instructions to learn how to use the Python API to control the agent. See below what kind of output to expect from the notebook, if everything is working properly.
+
+- Begin by importing the necessary packages. If the code cell below returns an error, please revisit the project instructions to double-check that you have installed [Unity ML-Agents](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md) and [NumPy](https://numpy.org/).
+
+![Packages][image2]
+
+- Set your operational system by changing the value of the variable operational_system in the second cell code: 
+
+![Environment][image3]
+
+- Environments contain brains that are responsible for deciding the actions of their associated agents. Check for the first brain available, and set it as the default brain it will be controlled from Python. 
+
+![Brain][image4]
+
+- Examine the State and Action Spaces running the code below to print some information about the environment. 
+
+![State][image5]
+
+- In the next code cell, learn how to use the Python API to control the agent and receive feedback from the environment. Note that in this coding environment, it is not possible to watch the agent while it is training. Set the train_mode=True to restart the environment.
+
+![Control][image6]
+
+- The next code cell plots the scores.
+
+![Scores][image7]
+
+- Close the environment.
+
+![Close][image8]
+
+- Run the notebook:
+
+![Run][image13]
