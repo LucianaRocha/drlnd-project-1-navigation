@@ -6,6 +6,8 @@
 [image4]: ./images/network.png "Net"
 [image5]: ./images/Rewards.png "Rewards"
 [image6]: ./images/Hyperparameters.png "Hyper"
+[image7]: ./images/loss_function.png "Loss"
+[image8]: ./images/Hyper_dqn.png "Hyper_dqn"
 
 
 # Project 1: Navigation
@@ -39,7 +41,7 @@ DQN uses a neural network as the function approximator to find the maximum expec
 
 In order to solve the mentioned instability, DQN proposes two key ideas:
 
-- **Experience Replay**: This method stores the agent’s experience at each time step in a replay-buffer that is accessed to perform the weight updates. Experience replay reduces the variance of the updates because successive updates are not correlated with one another as they would be with standard Q-learning. And by removing the dependence of successive experiences on the current weights, experience replay eliminated one source of instability.
+- **Experience Replay**: This method stores the agent’s experience at each time step in a replay-buffer that is accessed to perform the weight updates. Experience replay reduces the variance of the updates because successive updates are not correlated with one another as they would be with standard Q-learning. And by removing the dependence of successive experiences on the current weights, experience replay eliminates one source of instability.
 
 - **Fixed Q-Targets**: it is an iterative update that adjusts the action-values (Q) towards target values that are only periodically updated, thereby reducing correlations with the target.
 
@@ -92,7 +94,7 @@ DQN performs Q-learning updates. For each step of the learning process, the valu
 The squared error is calculated for each one of the experiences in the minibatch. The average of those squared errors are calculated to summarize the minibatch error in one value.  
 This process is known as Mean Squared Error Loss.  
 The loss function can be represented by the following formula:  
-L(0) = E [ (r + g*Q(s',a',0^- ) - Q(s,a;0))^2 ]
+![loss][image7]
 
 #### Reducing the error
 
@@ -105,7 +107,11 @@ My next step was a tunning phase on the hyperparameters. Within this phase, I al
 It's a difficult task since a minimal change in one hyperparameter can lead to a significant change in the final result.  
 Below I showed the defined hyperparameters.
 
+- In dqn_agent.py  
 ![Hyper][image6]
+
+- In Notebook when I define the DQN
+![Hyper_dqn][image8]
 
 ## Plot of Rewards
 This graph shows the rewards per episode within the training phase, as well as the moving mean. It illustrates that the Agent is able to receive an average reward of at least +13 over 100 episodes.  
@@ -126,7 +132,7 @@ Deep Q-Learning samples experience transitions uniformly from a replay memory. P
 - [Dueling Q-Network](https://arxiv.org/abs/1511.06581)  
 Currently, in order to determine which states are (or are not) valuable, we have to estimate the corresponding action values for each action. However, by replacing the traditional Deep Q-Network (DQN) architecture with a dueling architecture, we can assess the value of each state, without having to learn the effect of each action.
 - Other extensions proposed:
-	- Learning from [multi-step bootstrap targets](https://arxiv.org/abs/1602.01783)
+	- Learning from [multi-step bootstrap targets](https://arxiv.org/abs/1602.01783) (as in A3C)
 	- [Distributional DQN](https://arxiv.org/abs/1707.06887)
 	- [Noisy DQN](https://arxiv.org/abs/1706.10295)
 
